@@ -6,7 +6,7 @@
 /*   By: lpalomin <lpalomin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 11:48:24 by lpalomin          #+#    #+#             */
-/*   Updated: 2025/01/16 17:26:45 by lpalomin         ###   ########.fr       */
+/*   Updated: 2025/01/16 23:25:02 by lpalomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char s1, const char s2, size_t n);
 
 #endif
