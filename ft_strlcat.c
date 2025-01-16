@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpalomin <lpalomin@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: lpalomin <lpalomin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:10:33 by lpalomin          #+#    #+#             */
-/*   Updated: 2025/01/15 16:10:35 by lpalomin         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:06:15 by lpalomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	src_size;
 	size_t	dst_size;
 
-	src_size = 0;
-	while (src[src_len] != '\0')
-		src_size++;
 	dst_size = 0;
-	while (dst[dst_len] != '\0' && dst_len < size)
+	while (dst[dst_size] != '\0')
 		dst_size++;
-	if (size <= dst_len)
-		return (size + src_len);
+	src_size = 0;
+	while (src[src_size] != '\0')
+		src_size++;
+	if (dst_size >= size - 1)
+		return (size + src_size);
 	cont = 0;
-	while (str[cont] != '\0' && (dst_len + cont) < (size - 1))
+	while (cont < size - dst_size - 1 && src[cont] != '\0')
 	{
-		dst[dst_len + cont] = src[cont];
+		dst[dst_size + cont] = src[cont];
 		cont++;
 	}
-	dst[dst_len + cont] = '\0';
-	return (dst_len + src_len);
+	dst[dst_size + cont] = '\0';
+	return (dst_size + src_size);
 }
