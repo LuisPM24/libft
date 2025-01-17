@@ -6,7 +6,7 @@
 /*   By: lpalomin <lpalomin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 11:48:24 by lpalomin          #+#    #+#             */
-/*   Updated: 2025/01/17 11:37:07 by lpalomin         ###   ########.fr       */
+/*   Updated: 2025/01/17 14:33:53 by lpalomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 #include <stddef.h>
+#include <stdlib.h>
 
 //Libc functions without malloc
 int		ft_isalpha(int c);
@@ -37,5 +38,8 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
+//Libc functions that uses malloc
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 
 #endif
