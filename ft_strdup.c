@@ -1,9 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lpalomin <lpalomin@student.42madrid.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/20 11:12:34 by lpalomin          #+#    #+#             */
+/*   Updated: 2025/01/20 11:12:36 by lpalomin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+#include <stdlib.h>
+
 char	*ft_strdup(const char *s)
 {
-	size_t			size;
-	size_t			cont;
-	void			*mem;
-	unsigned char	*str_cpy;
+	size_t	size;
+	size_t	cont;
+	void	*mem;
+	char	*str_cpy;
 
 	size = 0;
 	cont = 0;
@@ -12,7 +27,7 @@ char	*ft_strdup(const char *s)
 	mem = malloc(size + 1);
 	if (mem == NULL)
 		return (NULL);
-	str_cpy = (unsigned char *)mem;
+	str_cpy = (char *)mem;
 	while (cont < size)
 	{
 		str_cpy[cont] = s[cont];
