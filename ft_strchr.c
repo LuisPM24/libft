@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpalomin <lpalomin@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: lpalomin <lpalomin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 11:12:06 by lpalomin          #+#    #+#             */
-/*   Updated: 2025/01/20 11:12:08 by lpalomin         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:03:14 by lpalomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	unsigned int	cont;
+	size_t	cont;
 
 	cont = 0;
 	while (s[cont] != '\0')
@@ -28,7 +28,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s + ft_strlen(s));
 	while (*s)
 	{
-		if (*s == (char)c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}

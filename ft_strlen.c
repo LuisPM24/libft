@@ -6,7 +6,7 @@
 /*   By: lpalomin <lpalomin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:31:31 by lpalomin          #+#    #+#             */
-/*   Updated: 2025/01/18 11:06:45 by lpalomin         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:02:41 by lpalomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	unsigned int	cont;
+	size_t	cont;
 
 	cont = 0;
 	while (s[cont] != '\0')
