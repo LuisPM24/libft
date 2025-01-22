@@ -1,6 +1,18 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lpalomin <lpalomin@student.42madrid.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/22 10:47:55 by lpalomin          #+#    #+#             */
+/*   Updated: 2025/01/22 10:47:57 by lpalomin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	count_words(char const *s, char c)
+#include "libft.h"
+
+static int	count_words(char const *s, char c)
 {
 	size_t	cont;
 	size_t	words;
@@ -23,29 +35,7 @@ int	count_words(char const *s, char c)
 	return (words);
 }
 
-char	*ft_strdup(const char *s)
-{
-	size_t	size;
-	size_t	cont;
-	char	*str_cpy;
-
-	size = 0;
-	cont = 0;
-	while (s[size] != '\0')
-		size++;
-	str_cpy = malloc(size + 1);
-	if (str_cpy == NULL)
-		return (NULL);
-	while (cont < size)
-	{
-		str_cpy[cont] = s[cont];
-		cont++;
-	}
-	str_cpy[cont] = '\0';
-	return (str_cpy);
-}
-
-int	add_word(char const **s, char c, char **str_group, size_t *cont)
+static int	add_word(char const **s, char c, char **str_group, size_t *cont)
 {
 	const char	*start;
 	size_t		len;

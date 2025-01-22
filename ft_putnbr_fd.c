@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpalomin <lpalomin@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 12:40:28 by lpalomin          #+#    #+#             */
-/*   Updated: 2025/01/14 12:40:31 by lpalomin         ###   ########.fr       */
+/*   Created: 2025/01/22 13:37:12 by lpalomin          #+#    #+#             */
+/*   Updated: 2025/01/22 13:37:13 by lpalomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	char	aux;
+
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	aux = (n % 10) + '0';
+	write(fd, &aux, 1);
 }

@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpalomin <lpalomin@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 12:40:28 by lpalomin          #+#    #+#             */
-/*   Updated: 2025/01/14 12:40:31 by lpalomin         ###   ########.fr       */
+/*   Created: 2025/01/22 12:30:56 by lpalomin          #+#    #+#             */
+/*   Updated: 2025/01/22 12:30:58 by lpalomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	unsigned int	cont;
+
+	if (!s || !f)
+		return ;
+	cont = 0;
+	while (s[cont])
+	{
+		f(cont, &s[cont]);
+		cont++;
+	}
 }

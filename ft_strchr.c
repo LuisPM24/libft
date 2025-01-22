@@ -10,27 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	cont;
-
-	cont = 0;
-	while (s[cont] != '\0')
-		cont++;
-	return (cont);
-}
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (c == 0)
-		return ((char *)s + ft_strlen(s));
 	while (*s)
 	{
-		if (*s == (unsigned char)c)
+		if ((unsigned char)*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
+	if ((unsigned char)c == '\0')
+		return ((char *)s);
 	return (NULL);
 }

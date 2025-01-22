@@ -10,37 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	unsigned int	cont;
-
-	cont = 0;
-	while (s[cont] != '\0')
-		cont++;
-	return (cont);
-}
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	cont;
-
-	cont = 0;
-	if (size > 0)
-	{
-		while (src[cont] != '\0' && cont < size - 1)
-		{
-			dst[cont] = src[cont];
-			cont++;
-		}
-		dst[cont] = '\0';
-	}
-	while (src[cont] != '\0')
-		cont++;
-	return (cont);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

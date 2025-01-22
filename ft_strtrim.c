@@ -10,50 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	unsigned int	cont;
-
-	cont = 0;
-	while (s[cont] != '\0')
-		cont++;
-	return (cont);
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
-	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
-}
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	size_t			cont;
-	void			*mem;
-	unsigned char	*mem_ini;
-
-	cont = 0;
-	mem = malloc(nmemb * size);
-	if (mem == NULL)
-		return (NULL);
-	mem_ini = (unsigned char *)mem;
-	while (cont < (nmemb * size))
-	{
-		mem_ini[cont] = 0;
-		cont++;
-	}
-	return (mem);
-}
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
