@@ -6,7 +6,7 @@
 /*   By: lpalomin <lpalomin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 11:48:24 by lpalomin          #+#    #+#             */
-/*   Updated: 2025/01/21 10:21:38 by lpalomin         ###   ########.fr       */
+/*   Updated: 2025/01/21 16:57:57 by lpalomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 #endif
