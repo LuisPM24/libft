@@ -32,7 +32,15 @@ SRCS = 	ft_atoi.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_split.c
+		ft_split.c \
+		ft_printf.c \
+		printf_putchar.c \
+		printf_puthex.c \
+		printf_putnbr.c \
+		printf_putstr.c \
+		printf_putunsig.c \
+		printf_putupphex.c \
+		printf_putvoid.c
 
 BONUS_SRCS =	ft_lstnew.c \
 				ft_lstadd_front.c \
